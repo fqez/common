@@ -26,6 +26,7 @@ EOF"
 
 	sudo debootstrap --variant=buildd --arch $arch $ver /var/chroot/$name $url
 
+	sudo cp /etc/resolv.conf /var/chroot/$name/etc/resolv.conf	
 
 	gnome-terminal -e "sudo schroot -c $name -u root"
 fi
