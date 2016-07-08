@@ -14,7 +14,6 @@ if [ ! -f $pathdest ]; then
 
 	sudo sudo mkdir -p /var/chroot/$name
 
-	/etc/schroot/chroot.d/$name.conf
 	sudo sh -c "cat<<EOF>/etc/schroot/chroot.d/$name.conf
 [$name]
 description=$so $ver $arch
