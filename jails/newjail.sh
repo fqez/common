@@ -1,15 +1,30 @@
 #!/bin/bash
 
+if [ $# != 4 ]
+then
+	echo "usage: ./newjail.sh so ver arch name"
+	echo "example: ./newjail.sh ubuntu trusty amd64 trusty"
+	exit -1
+fi
+
 so=$1
 ver=$2
 arch=$3
 name=$4
 
 pathdest="/var/chroot/$name"
-if [ ! -f $pathdest ]; then
+if [ ! -d $pathdest ]
+then
 	url="http://archive.ubuntu.com/ubuntu"
-	if [ $so eq "debian" ]; then
+	if [ "$so" = "debian" ]
+	then
   		url="http://ftp.debian.org/debian"
+	elif [ "$so" = "ubuntu" ]
+	then
+		url="http://archive.ubuntu.com/ubuntu"
+	else
+		echo "SO $so not supported, only support ubuntu or debian"
+		exit -1
 	fi
 
 	sudo sudo mkdir -p /var/chroot/$name
@@ -28,4 +43,7 @@ EOF"
 	sudo cp /etc/resolv.conf /var/chroot/$name/etc/resolv.conf	
 
 	gnome-terminal -e "sudo schroot -c $name -u root"
+else
+	echo "the jail $name already exists"
+	exit -1
 fi
