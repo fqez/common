@@ -1,0 +1,52 @@
+dpkg -i libpcl-common1.8_1.8.0+dfsg1-3ubuntu2~ubuntu16.04.1_amd64.deb
+apt-get install -f
+dpkg -i libpcl-common1.8_1.8.0+dfsg1-3ubuntu2~ubuntu16.04.1_amd64.deb
+dpkg -i libpcl-kdtree1.8_1.8.0+dfsg1-3ubuntu2~ubuntu16.04.1_amd64.deb
+dpkg -i libpcl-octree1.8_1.8.0+dfsg1-3ubuntu2~ubuntu16.04.1_amd64.deb
+dpkg -i libpcl-search1.8_1.8.0+dfsg1-3ubuntu2~ubuntu16.04.1_amd64.deb
+dpkg -i libpcl-surface1.8_1.8.0+dfsg1-3ubuntu2~ubuntu16.04.1_amd64.deb
+apt-get install -fy
+dpkg -i libpcl-surface1.8_1.8.0+dfsg1-3ubuntu2~ubuntu16.04.1_amd64.deb
+dpkg -i libpcl-sample-consensus1.8_1.8.0+dfsg1-3ubuntu2~ubuntu16.04.1_amd64.deb
+dpkg -i libpcl-filters1.8_1.8.0+dfsg1-3ubuntu2~ubuntu16.04.1_amd64.deb
+dpkg -i libpcl-features1.8_1.8.0+dfsg1-3ubuntu2~ubuntu16.04.1_amd64.deb
+dpkg -i libpcl-ml1.8_1.8.0+dfsg1-3ubuntu2~ubuntu16.04.1_amd64.deb
+dpkg -i libpcl-segmentation1.8_1.8.0+dfsg1-3ubuntu2~ubuntu16.04.1_amd64.deb
+dpkg -i libpcl-apps1.8_1.8.0+dfsg1-3ubuntu2~ubuntu16.04.1_amd64.deb
+dpkg -i libpcl-io1.8_1.8.0+dfsg1-3ubuntu2~ubuntu16.04.1_amd64.deb
+dpkg -i libpcl-keypoints1.8_1.8.0+dfsg1-3ubuntu2~ubuntu16.04.1_amd64.deb
+dpkg -i libpcl-outofcore1.8_1.8.0+dfsg1-3ubuntu2~ubuntu16.04.1_amd64.deb
+dpkg -i libpcl-people1.8_1.8.0+dfsg1-3ubuntu2~ubuntu16.04.1_amd64.deb
+dpkg -i libpcl-recognition1.8_1.8.0+dfsg1-3ubuntu2~ubuntu16.04.1_amd64.deb
+dpkg -i libpcl-registration1.8_1.8.0+dfsg1-3ubuntu2~ubuntu16.04.1_amd64.deb
+dpkg -i libpcl-stereo1.8_1.8.0+dfsg1-3ubuntu2~ubuntu16.04.1_amd64.deb
+dpkg -i libpcl-tracking1.8_1.8.0+dfsg1-3ubuntu2~ubuntu16.04.1_amd64.deb
+dpkg -i libpcl-visualization1.8_1.8.0+dfsg1-3ubuntu2~ubuntu16.04.1_amd64.deb
+dpkg -i pcl-tools_1.8.0+dfsg1-3ubuntu2~ubuntu16.04.1_amd64.deb
+dpkg -i libpcl-dev_1.8.0+dfsg1-3ubuntu2~ubuntu16.04.1_amd64.deb
+apt-get install -fy
+dpkg -i libpcl-dev_1.8.0+dfsg1-3ubuntu2~ubuntu16.04.1_amd64.deb
+dpkg -i libpcl-doc_1.8.0+dfsg1-3ubuntu2~ubuntu16.04.1_all.deb
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,29 @@
+para poder hacer un backport sencillo (que no pensemos subir ni mantener en el repositorio de backports de ubuntu), te puedes basar en las instrucciones de SimpleBackPortCreation [1] de Debian, aplicando las variantes necesarias para ubuntu.
+Básicamente, los pasos serían:
+
+1. Hacerte un chroot ubuntu Xenial x32/x64 o máquinas con estos sistemas.
+
+2. Añadir al sources.list los repositorios de universe.
+
+3. apt-get install packaging-dev debian-keyring devscripts equivs
+
+4. Localizar la URL del fichero .dsc de los fuentes (En este caso: http://archive.ubuntu.com/ubuntu/pool/universe/v/vtk6/vtk6_6.3.0+dfsg1-1build1.dsc)
+
+5. Descargar los fuentes: dget -x <URL del dsc>
+Si hay algún problema de validación, deberás localizar otros posibles keyring que te falten (vía aptitude por ejemplo) o añadir manualmente la firma de verificación. Asegúrate primero que el problema no sea que falte el directorio ".gnupg" (puede ocurrir)
+
+6. Cambiar de directorio al que se acaba de crear (Ej: cd vtk6-6.3.0+dfsg1
+
+7. Utilizar dch para cambiar el número de versión del paquete original. Esto permite que si luego se añade el paquete en condiciones a la distribución, el nuestro quede por debajo en versión. Ej:
+ DEBFULLNAME="TU_NOMBRE" DEBEMAIL="TU_EMAIL" dch --local ~ubuntu16.04. --distribution xenial-backports "Rebuild for xenial-backports."
+
+8. Instala todas las dependencias necesarias: mk-build-deps --install --remove
+Si faltara alguna, tocaría añadir el repositorio de "xenial-backports" por si están ahí o hacer backport de los que no se pueden encontrar hasta cubrir todas las dependencias.
+
+9. Genera los paquetes sin firmar: dpkg-buildpackage -us -uc
+
+10. En el directorio donde comenzaste el proceso deberían encontrarse todos los ".deb" que se pueden obtener de los fuentes de los que partiste así como los ficheros asociados a la generación.
+
+
+De todas maneras, te he hecho un backport de yakkety de vtk, lo deberías poder encontrar en [2], bajo deb/xenial.
+
