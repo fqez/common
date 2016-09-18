@@ -2,6 +2,9 @@ sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu `lsb_relea
 
 sudo apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys D2486D2DD83DB69272AFE98867170598AF249743
 
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 5E6DA83306132997
+sudo apt-add-repository "deb http://zeroc.com/download/apt/ubuntu$(lsb_release -rs) stable main"
+
 sudo add-apt-repository ppa:jolting/vtk6backport
 # OR https://launchpad.net/~elvstone/+archive/ubuntu/vtk7
 
@@ -36,7 +39,7 @@ sudo apt-get install libusb-1.0-0 libusb-1.0-0-dev
 
 sudo apt-get install libcwiid-dev
 
-sudo apt-get install python-opencv python-matplotlib python-qt4 python-zeroc-ice python-qwt5-qt4 
+sudo apt-get install python-opencv python-matplotlib python-qt4 python-qwt5-qt4 python-pip
 
 sudo apt-get install libqwt5-qt4 libqwt5-qt4-dev
 
@@ -48,7 +51,9 @@ sudo apt-get install libboost-system-dev libboost-filesystem-dev
 
 sudo apt-get install libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev
 
-sudo apt-get install ice35-slice ice35-translators libzeroc-ice35-dev ice35-services
+sudo apt-get install libbz2-dev zeroc-ice-all-runtime zeroc-ice-all-dev
+pip install zeroc-ice
+
 
 sudo apt-get install libopenni2-dev
 
