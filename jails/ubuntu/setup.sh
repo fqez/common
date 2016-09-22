@@ -4,7 +4,7 @@ filename='/tmp/setup.sh'
 
 echo '#!/bin/bash' > $filename
 
-echo 'apt-get -y install software-properties-common nano' >> $filename
+echo 'apt-get -y install bash-completion software-properties-common nano' >> $filename
 
 echo 'ver=$(lsb_release -cs)'  >> $filename
 

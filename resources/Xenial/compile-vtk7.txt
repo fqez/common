@@ -1,0 +1,9 @@
+sudo apt-get install cmake cmake-curses-gui python3-dev libxt-dev libhdf5-openmpi-dev  libnetcdf-dev libnetcdf-cxx-legacy-dev libxml++2.6-dev libjsoncpp-dev libtheora-dev tk-dev tcl-dev freeglut3 freeglut3-dev libgl1-mesa-dev libglu1-mesa-dev
+
+instalar QT5.7 desde el instalador web
+
+
+opt/Qt/5.7/gcc_64/lib
+
+
+-DVTK_QT_VERSION:STRING=5 -DQT_QMAKE_EXECUTABLE:PATH=/opt/Qt/5.7/gcc_64/bin/qmake -DVTK_Group_Qt:BOOL=ON -DCMAKE_PREFIX_PATH:PATH=/opt/Qt/5.7/gcc_64/lib/cmake -DBUILD_SHARED_LIBS:BOOL=ON -DVTK_WRAP_PYTHON=ON -DVTK_PYTHON_VERSION=3 -DPYTHON_EXECUTABLE=/usr/bin/python3 -DPYTHON_INCLUDE_DIR=/usr/include/python3.5 -DPYTHON_LIBRARY=/usr/lib/x86_64-linux-gnu/libpython3.5m.so -DCMAKE_BUILD_TYPE=Release

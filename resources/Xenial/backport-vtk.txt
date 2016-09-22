@@ -1,5 +1,5 @@
 apt-get install libproj-dev  
-apt-get install hdfs5-openmpi-dev  
+apt-get install libhdf5-openmpi-dev  
 
 dpkg -i libvtk6.3_6.3.0+dfsg1-1build1~ubuntu16.04.1_amd64.deb
 apt-get install -fy
