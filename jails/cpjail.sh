@@ -14,7 +14,7 @@ pathdest="/var/chroot/$2"
 
 
 if [ ! -d $pathdest ]; then
-    mkdir -p $pathdest
+    sudo mkdir -p $pathdest
 	sudo cp -r  $pathorig/* $pathdest
 	
 	sudo cp /etc/schroot/chroot.d/$1.conf /etc/schroot/chroot.d/$2.conf

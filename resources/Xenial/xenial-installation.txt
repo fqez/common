@@ -41,6 +41,8 @@ sudo apt-get install libcwiid-dev
 
 sudo apt-get install python-opencv python-matplotlib python-qt4 python-qwt5-qt4 python-pip
 
+pip install --upgrade pip
+
 sudo apt-get install libqwt5-qt4 libqwt5-qt4-dev
 
 sudo apt-get install gsl-bin libgsl0-dev 
@@ -52,6 +54,7 @@ sudo apt-get install libboost-system-dev libboost-filesystem-dev
 sudo apt-get install libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev
 
 sudo apt-get install libbz2-dev zeroc-ice-all-runtime zeroc-ice-all-dev
+sudo apt-get install libssl-dev 
 pip install zeroc-ice
 
 
