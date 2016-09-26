@@ -58,7 +58,7 @@ sudo apt-get install libssl-dev
 pip install zeroc-ice
 
 
-sudo apt-get install libopenni2-dev
+sudo apt-get install libopenni2-dev libopenni-dev
 
 sudo apt-get install gazebo7 libgazebo7-dev
 

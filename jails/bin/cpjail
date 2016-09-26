@@ -2,7 +2,7 @@
 
 if [ $# != 2 ]
 then
-	echo "usage: ./cpjail.sh orig dest"
+	echo "usage: cpjail orig dest"
 	exit -1
 fi
 

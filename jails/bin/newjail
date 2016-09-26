@@ -2,8 +2,8 @@
 
 if [ $# != 4 ]
 then
-	echo "usage: ./newjail.sh so ver arch name"
-	echo "example: ./newjail.sh ubuntu trusty amd64 trusty"
+	echo "usage: newjail.sh so ver arch name"
+	echo "example: newjail.sh ubuntu trusty amd64 trusty"
 	exit -1
 fi
 
@@ -11,6 +11,8 @@ so=$1
 ver=$2
 arch=$3
 name=$4
+
+jailpath="/usr/local/share/jails"
 
 pathdest="/var/chroot/$name"
 if [ ! -d $pathdest ]
@@ -42,8 +44,12 @@ EOF"
 
 	sudo cp /etc/resolv.conf /var/chroot/$name/etc/resolv.conf
 	
-	./$so/setup.sh $name
-	./displayjail.sh $name	
+	if [ -d $jailpath ]; then
+		$jailpath/$so/$ver/setup.sh $name
+	else
+		../jails/$so/$ver/setup.sh $name
+	fi
+	#displayjail $name	
 
 	gnome-terminal -e "sudo schroot -c $name -u root"
 else
