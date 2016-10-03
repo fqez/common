@@ -1,5 +1,9 @@
 #!/bin/bash
 
-gnome-terminal -e "sudo schroot -c $1 -u root"
+if [ "-t" == "$1" ]; then
+    sudo schroot -c $2 -u root
+else
+    gnome-terminal -e "sudo schroot -c $1 -u root"
+fi
 
 
