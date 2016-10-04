@@ -50,6 +50,8 @@ pip install --upgrade pip
 
 sudo apt-get install libqwt5-qt4 libqwt5-qt4-dev
 
+sudo apt-get install qtbase5-dev
+
 sudo apt-get install gsl-bin libgsl-dev 
 
 sudo apt-get install  libtinyxml-dev libxml++2.6-dev 
