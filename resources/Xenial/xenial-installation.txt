@@ -1,6 +1,7 @@
 sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-latest.list'
 
 sudo apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys D2486D2DD83DB69272AFE98867170598AF249743
+##Si no va usa wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
 
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 5E6DA83306132997
 sudo apt-add-repository "deb http://zeroc.com/download/apt/ubuntu$(lsb_release -rs) stable main"
@@ -43,13 +44,13 @@ sudo apt-get install libusb-1.0-0 libusb-1.0-0-dev
 
 sudo apt-get install libcwiid-dev
 
-sudo apt-get install python-opencv python-matplotlib python-qt4 python-qwt5-qt4 python-pip
+sudo apt-get install python-matplotlib python-qt4 python-qwt5-qt4 python-pip
 
 pip install --upgrade pip
 
 sudo apt-get install libqwt5-qt4 libqwt5-qt4-dev
 
-sudo apt-get install gsl-bin libgsl0-dev 
+sudo apt-get install gsl-bin libgsl-dev 
 
 sudo apt-get install  libtinyxml-dev libxml++2.6-dev 
 
@@ -66,11 +67,7 @@ sudo apt-get install libopenni2-dev libopenni-dev
 
 sudo apt-get install gazebo7 libgazebo7-dev
 
-sudo apt-get install libopencv-dev libopencv-calib3d-dev libopencv-contrib-dev libopencv-core-dev libopencv-features2d-dev libopencv-flann-dev
-sudo apt-get install libopencv-gpu-dev libopencv-highgui-dev libopencv-imgproc-dev libopencv-legacy-dev libopencv-ml-dev
-sudo apt-get install libopencv-objdetect-dev libopencv-video-dev libcv-dev libcvaux-dev libhighgui-dev
-
-sudo apt-get install qtbase5-dev
+sudo apt-get install opencv-dev opencv-libs opencv-main opencv-python
 
 
 
