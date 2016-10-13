@@ -6,7 +6,7 @@ sudo apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys D2486D2DD83D
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 5E6DA83306132997
 sudo apt-add-repository "deb http://zeroc.com/download/apt/ubuntu$(lsb_release -rs) stable main"
 
-sudo sh -c 'cat<<EOF>/etc/apt/sources.list.d/jderobot.list
+sudo sh -c 'cat<<EOF>/etc/apt/sources.list.d/jderobotTest.list
 # for ubuntu 16.04 LTS (32/64 bit)
 
 deb http://jderobot.org/jderoboTest xenial main
@@ -34,7 +34,7 @@ sudo apt-get install libgoocanvasmm-2.0-6 libgoocanvasmm-2.0-dev
 sudo apt-get install libgsl2 libgsl-dev
 
 
-sudo apt-get install libxml++2.6-2v5 libxml++2.6-dev
+sudo apt-get install libxml++2.6-2v5 libxml++2.6-dev libtinyxml-dev
 
 sudo apt-get install libeigen3-dev
 
@@ -44,15 +44,14 @@ sudo apt-get install libusb-1.0-0 libusb-1.0-0-dev
 
 sudo apt-get install libcwiid-dev
 
-sudo apt-get install python-matplotlib python-qt4 python-qwt5-qt4 python-pip
+sudo apt-get install python3-matplotlib python3-pyqt5 python3-pip opencv-python python3-numpy python3-pyqt5.qtsvg
 
-pip install --upgrade pip
+pip3 install --upgrade pip
 
-sudo apt-get install libqwt5-qt4 libqwt5-qt4-dev
+sudo apt-get install qfi
 
 sudo apt-get install gsl-bin libgsl-dev 
 
-sudo apt-get install  libtinyxml-dev libxml++2.6-dev 
 
 sudo apt-get install libboost-system-dev libboost-filesystem-dev
 
@@ -60,14 +59,16 @@ sudo apt-get install libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev
 
 sudo apt-get install libbz2-dev zeroc-ice-all-runtime zeroc-ice-all-dev
 sudo apt-get install libssl-dev 
-pip install zeroc-ice
+pip3 install zeroc-ice
 
 
 sudo apt-get install libopenni2-dev libopenni-dev
 
 sudo apt-get install gazebo7 libgazebo7-dev
 
-sudo apt-get install opencv-dev opencv-libs opencv-main opencv-python
+sudo apt-get install opencv-dev opencv-libs opencv-main
+
+sudo apt-get install nodejs
 
 
 
