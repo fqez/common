@@ -15,21 +15,19 @@ sudo apt-get install vtk7
 sudo apt-get install build-essential -y
 sudo apt-get install python-dev python3-dev python-numpy python3-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev -y
 
-sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
+sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev -y
 
-sudo apt-get install freeglut3 freeglut3-dev libgl1-mesa-dev libglu1-mesa
+sudo apt-get install freeglut3 freeglut3-dev libgl1-mesa-dev libglu1-mesa -y 
 
-sudo apt-get install libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev
+sudo apt-get install libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev -y 
 
-sudo apt-get install libopenni2-dev libopenni-dev libeigen3-dev libqt5opengl5-gles-dev
+sudo apt-get install libopenni2-dev libopenni-dev libeigen3-dev libqt5opengl5-dev -y 
 
 git clone https://github.com/opencv/opencv.git
 
 git clone https://github.com/opencv/opencv_contrib.git
 
-cd opencv
-mkdir build
-cd build
-cmake -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/usr/local -DINSTALL_C_EXAMPLES=OFF -DINSTALL_PYTHON_EXAMPLES=OFF -DOPENCV_EXTRA_MODULES_PATH=$(pwd)/../../opencv_contrib/modules -DWITH_OPENNI=ON -DWITH_OPENNI2=ON -DWITH_OPENGL=ON -DWITH_QT=ON ..
+cd opencv && mkdir build && cd build
+cmake -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/usr/local -DINSTALL_C_EXAMPLES=OFF -DINSTALL_PYTHON_EXAMPLES=OFF -DOPENCV_EXTRA_MODULES_PATH=$(pwd)/../../opencv_contrib/modules -DWITH_OPENNI=ON -DWITH_OPENNI2=ON -DWITH_OPENGL=ON -DWITH_QT=ON -DCPACK_GENERATOR=DEB ..
 
 
