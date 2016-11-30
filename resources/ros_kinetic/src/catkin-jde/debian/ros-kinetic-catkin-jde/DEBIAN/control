@@ -1,0 +1,10 @@
+Package: ros-kinetic-catkin-jde
+Version: 0.7.4-0xenial
+Architecture: amd64
+Maintainer: Dirk Thomas <dthomas@osrfoundation.org>
+Installed-Size: 625
+Depends: cmake, libgtest-dev, python3-catkin-pkg (>> 0.2.9), python3-empy, python3-nose
+Section: misc
+Priority: extra
+Homepage: http://www.ros.org/wiki/catkin
+Description: Low-level build system macros and infrastructure for ROS.

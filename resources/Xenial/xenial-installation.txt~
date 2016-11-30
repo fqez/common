@@ -1,0 +1,76 @@
+sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-latest.list'
+
+sudo apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys D2486D2DD83DB69272AFE98867170598AF249743
+##Si no va usa wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
+
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 5E6DA83306132997
+sudo apt-add-repository "deb http://zeroc.com/download/apt/ubuntu$(lsb_release -rs) stable main"
+
+sudo sh -c 'cat<<EOF>/etc/apt/sources.list.d/jderobot.list
+# for ubuntu 16.04 LTS (32/64 bit)
+
+deb http://jderobot.org/jderoboTest xenial main
+EOF'
+
+wget http://jderobot.org/jderoboTest/jderobot-test.asc -O - | sudo apt-key add -
+
+sudo apt-get update
+
+sudo apt-get install libpcl-dev
+
+sudo apt-get install build-essential libtool cmake g++ gcc git make
+
+sudo apt-get install freeglut3 freeglut3-dev libgl1-mesa-dev libglu1-mesa
+
+sudo apt-get install libgtk2.0-0 libgtk2.0-bin libgtk2.0-cil libgtk2.0-common libgtk2.0-dev libgtkgl2.0-1
+sudo apt-get install libgtkgl2.0-dev libgtkglext1 libgtkglext1-dev libglademm-2.4-dev libgtkmm-2.4-dev 
+sudo apt-get install libgnomecanvas2-0 libgnomecanvas2-dev  libgtkglext1-doc libgnomecanvasmm-2.6-dev
+sudo apt-get install libgnomecanvasmm-2.6-1v5 libgtkglextmm-x11-1.2-0v5 libgtkglextmm-x11-1.2-dev
+
+
+
+sudo apt-get install libgoocanvasmm-2.0-6 libgoocanvasmm-2.0-dev
+
+sudo apt-get install libgsl2 libgsl-dev
+
+
+sudo apt-get install libxml++2.6-2v5 libxml++2.6-dev
+
+sudo apt-get install libeigen3-dev
+
+sudo apt-get install libdc1394-22 libdc1394-22-dev
+
+sudo apt-get install libusb-1.0-0 libusb-1.0-0-dev
+
+sudo apt-get install libcwiid-dev
+
+sudo apt-get install python-matplotlib python-qt4 python-qwt5-qt4 python-pip
+
+pip install --upgrade pip
+
+sudo apt-get install libqwt5-qt4 libqwt5-qt4-dev
+
+sudo apt-get install gsl-bin libgsl-dev 
+
+sudo apt-get install  libtinyxml-dev libxml++2.6-dev 
+
+sudo apt-get install libboost-system-dev libboost-filesystem-dev
+
+sudo apt-get install libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev
+
+sudo apt-get install libbz2-dev zeroc-ice-all-runtime zeroc-ice-all-dev
+sudo apt-get install libssl-dev 
+pip install zeroc-ice
+
+
+sudo apt-get install libopenni2-dev libopenni-dev
+
+sudo apt-get install gazebo7 libgazebo7-dev
+
+sudo apt-get install opencv-dev opencv-libs opencv-main opencv-python
+
+
+
+
+
+
