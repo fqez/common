@@ -10,7 +10,7 @@ ros-kinetic-class-loader
 
 2 - Ejecutar:
 <pre>
-./download.sh <nombre_fichero>
+./download.sh nombre_fichero
 </pre>
 
 3 - Ejecutar:
